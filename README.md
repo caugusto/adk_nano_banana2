@@ -4,6 +4,21 @@ This agent is designed to generate or edit images using `gemini-3.1-flash-image-
 
 ---
 
+## 📥 0. Installation & Setup
+
+1. **Create and Enter Workspace**:
+   ```bash
+   mkdir adk_nano_banana2
+   cd adk_nano_banana2
+   ```
+
+2. **Clone the repository**:
+   ```bash
+   git clone https://github.com/caugusto/adk_nano_banana2.git .
+   ```
+
+---
+
 ## 📂 Code Structure
 Everything is consolidated into a single file for deployment stability:
 - **`agent.py`**: Contains the `Agent` definition, custom tools, and prompt orchestration instructions.
@@ -86,13 +101,15 @@ You can evaluate the agent's logic and tools locally before deploying to Agent E
 2.  **Run with Web UI (Recommended)**:
     Execute the ADK web dashboard and chat client to visually test image results rendering using canvas widgets:
     ```bash
-    adk web
+    cd ..
+    adk web adk_nano_banana2
     ```
-    Ensure you run this command **inside** the `orbital_galileo` directory to avoid session app name mismatches. Access at `http://127.0.0.1:8000`.
+    Access at `http://127.0.0.1:8000`.
 
 3.  **Run with interactive CLI (Alternative)**:
     ```bash
-    adk run .
+    cd ..
+    adk run adk_nano_banana2
     ```
 
 ---
