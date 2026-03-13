@@ -93,6 +93,7 @@ python3 deploy_global_env.py
   * Orchestration uses `gemini-3.1-flash-lite-preview` inside location `global`.
   * Image generation uses `gemini-3.1-flash-image-preview` inside location `global`.
   * The Agent Engine container deploys into `us-central1`.
+  * **Changing Deployment Location**: If you need to deploy the container to a different region (e.g., `us-east4`), open `deploy_global_env.py` and modify `DEPLOYMENT_LOCATION = "us-central1"` at line 31.
 
 ---
 
