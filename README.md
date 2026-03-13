@@ -94,6 +94,8 @@ python3 deploy_global_env.py
   * Image generation uses `gemini-3.1-flash-image-preview` inside location `global`.
   * The Agent Engine container deploys into `us-central1`.
   * **Changing Deployment Location**: If you need to deploy the container to a different region (e.g., `us-east4`), open `deploy_global_env.py` and modify `DEPLOYMENT_LOCATION = "us-central1"` at line 31.
+  * **First Deployment vs Updates**: The script initializes `agent_id = "<CHANGE-ME>"`. On your first run, the local SDK fails to retrieve an existing agent and automatically falls back to **Creating a new agent**. 
+    Once created, the output will print your fresh ID. Copy that ID and update `agent_id` in `deploy_global_env.py` so subsequent runs can **Update** that specific instance rather than creating duplicates!
 
 ---
 
@@ -105,6 +107,8 @@ After deployment, you can verify connection to the deployed agent using the help
 python3 test_live_agent.py
 ```
 This script initializes Vertex AI to the target workspace project space and streams a prompt to verify execution.
+
+* **Setting the ID**: Make sure to open `test_live_agent.py` and replace `agent_engine_id = "<CHANGE-ME>"` with the fresh ID provided by your deployment streams output to correctly bind test verifies!
 
 ---
 

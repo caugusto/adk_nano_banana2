@@ -16,7 +16,7 @@ def test_live():
     # Initialize Vertex AI with target workspace project
     vertexai.init(project=os.environ.get("GOOGLE_CLOUD_PROJECT"), location="us-central1")
     
-    agent_engine_id = "9116920619588386816"
+    agent_engine_id = "<CHANGE-ME>"  # Update with your Agent ID from deployment output
 
     print(f"Loading deployed agent: {agent_engine_id} ...")
     
