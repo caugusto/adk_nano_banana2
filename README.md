@@ -94,8 +94,8 @@ python3 deploy_global_env.py
   * Image generation uses `gemini-3.1-flash-image-preview` inside location `global`.
   * The Agent Engine container deploys into `us-central1`.
   * **Changing Deployment Location**: If you need to deploy the container to a different region (e.g., `us-east4`), open `deploy_global_env.py` and modify `DEPLOYMENT_LOCATION = "us-central1"` at line 31.
-  * **First Deployment vs Updates**: The script initializes `agent_id = "<CHANGE-ME>"`. On your first run, the local SDK fails to retrieve an existing agent and automatically falls back to **Creating a new agent**. 
-    Once created, the output will print your fresh ID. Copy that ID and update `agent_id` in `deploy_global_env.py` so subsequent runs can **Update** that specific instance rather than creating duplicates!
+  * **First Deployment vs Updates**: The script initializes with a default `agent_id`. On your first run inside a new project, the local SDK fails to retrieve that specific ID and automatically falls back to **Creating a new agent**. 
+    Once created, the output will print your fresh ID. You can optionally update `agent_id` in your scripts to explicitly lock subsequent updates directly onto that specific deployment instance!
 
 ---
 
