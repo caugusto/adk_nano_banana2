@@ -23,7 +23,7 @@ This agent is designed to generate or edit images using `gemini-3.1-flash-image-
 
 Everything is consolidated into a single file for deployment stability:
 - **`agent.py`**: Contains the `Agent` definition, custom tools, and prompt orchestration instructions.
-- **`deploy_global_env.py`**: Script to programmatically deploy the agent to Vertex AI Agent Engine with `GOOGLE_CLOUD_LOCATION="global"` fixed variables.
+- **`deploy_global_env.py`**: Script to programmatically deploy the agent to Vertex AI Agent Engine.
 
 ---
 
@@ -69,7 +69,7 @@ You can evaluate the agent's logic and tools locally before deploying to Agent E
     Execute the ADK web dashboard and chat client to visually test image results rendering using canvas widgets:
     ```bash
     cd ..
-    adk web adk_nano_banana2
+    adk web
     ```
     Access at `http://127.0.0.1:8000`.
 
