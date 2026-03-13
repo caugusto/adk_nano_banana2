@@ -59,7 +59,7 @@ Local configurations and project IDs are loaded from a `.env` file for local dev
 
 ### Setup
 1.  **Create `.env`**:
-    Copy the `.env.example` template to create your `.env` file:
+    Copy (or rename) the `.env.example` template to create your `.env` file:
     ```bash
     cp .env.example .env
     ```
@@ -68,6 +68,7 @@ Local configurations and project IDs are loaded from a `.env` file for local dev
     *   **`GOOGLE_CLOUD_PROJECT`**: Your GCP Project ID.
     *   **`GOOGLE_CLOUD_LOCATION`**: Deployment region (e.g., `us-central1`).
     *   **`GCS_BUCKET`**: The Cloud Storage bucket URL for staging (e.g., `gs://YOUR_BUCKET_NAME`).
+    *   **`MODEL_LOCATION`** (Optional): Set to `global` if you separate deployment region from serving model endpoints.
 
 The supporting scripts (`run_local_agent.py`, `deploy_global_env.py`, etc.) will automatically load these variables at runtime.
 

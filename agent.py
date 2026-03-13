@@ -20,7 +20,7 @@ from google.adk.agents.llm_agent import Agent
 if os.environ.get("LOCAL_DEV") != "False":
     os.environ["GOOGLE_GENAI_USE_VERTEXAI"] = "1"
     PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT")
-    LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
+    LOCATION = os.environ.get("MODEL_LOCATION", os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1"))
     
     if not PROJECT_ID:
         print("ERROR: GOOGLE_CLOUD_PROJECT environment variable not set.", file=sys.stderr)
